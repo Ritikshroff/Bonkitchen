@@ -22,7 +22,7 @@ const Contact = () => {
       name: "BON Kitchen - Delhi",
       address:
         "Unit 23, Food Court Complex, Connaught Place, New Delhi - 110001",
-      phone: "+91 98765 43211",
+      phone: "+91 8076507512",
       hours: "11:00 AM - 12:00 AM",
       deliveryRadius: "20 km radius",
     },
