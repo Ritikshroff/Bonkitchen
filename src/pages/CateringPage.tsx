@@ -829,7 +829,7 @@ const CateringPage = () => {
                       <Phone className="mr-4" size={24} />
                       <div>
                         <p className="font-bold">Call Us</p>
-                        <p className="text-orange-200">+91 98765 43210</p>
+                        <p className="text-orange-200">+91 8076507512</p>
                       </div>
                     </div>
 

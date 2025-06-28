@@ -951,7 +951,7 @@ const CateringPage = () => {
                       <div>
                         <p className="font-semibold text-sm">Call Us</p>
                         <p className="text-orange-200 text-sm">
-                          +91 98765 43210
+                          +91 8076507512
                         </p>
                       </div>
                     </div>

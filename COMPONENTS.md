@@ -294,7 +294,7 @@ const ContactPage = () => (
     <SectionHeader title="Contact Us" />
     <div className="grid md:grid-cols-2 gap-8">
       <CustomCard title="Call Us" icon={Phone}>
-        <p>+91 98765 43210</p>
+        <p>+91 8076507512</p>
         <CustomButton variant="primary">Call Now</CustomButton>
       </CustomCard>
       <CustomCard title="Email Us" icon={Mail}>

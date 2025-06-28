@@ -14,7 +14,7 @@ const Contact = () => {
       name: "Central Kitchen - Mumbai",
       address:
         "Shop 15, Ground Floor, Sunshine Plaza, Andheri West, Mumbai - 400058",
-      phone: "+91 98765 43210",
+      phone: "+91 8076507512",
       hours: "10:00 AM - 11:00 PM",
       deliveryRadius: "15 km radius",
     },
@@ -159,7 +159,7 @@ const Contact = () => {
                   href="tel:+8076507512"
                   className="text-blue-400 hover:text-blue-300"
                 >
-                  +91 98765 43210
+                  +91 8076507512
                 </a>
               </div>
 
