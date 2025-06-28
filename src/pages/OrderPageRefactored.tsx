@@ -18,7 +18,6 @@ import {
   MenuItemCard,
   FloatingCart,
   SectionHeader,
-  CustomButton,
 } from "../components/ui";
 
 interface CartItem {
