@@ -1,25 +1,51 @@
 /* BON Kitchen Custom Styles - Mobile First */
 
-/* Smooth scrolling for anchor links */
-html {
+/* Base styles and smooth scrolling */
+:root {
   scroll-behavior: smooth;
+  --safe-area-inset-bottom: env(safe-area-inset-bottom, 0px);
 }
 
-/* Mobile-first font loading */
+/* Mobile-first font loading with optimized performance */
+@font-face {
+  font-family: 'Inter';
+  font-display: swap; /* Prevent FOUT */
+  src: local('Inter'), url('/fonts/inter.woff2') format('woff2');
+}
+
+/* Enhanced mobile-first baseline */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  touch-action: manipulation;
+}
+
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 14px;
+  line-height: 1.5;
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+  /* Add padding for iOS safe area */
+  padding-bottom: var(--safe-area-inset-bottom);
 }
 
-/* Larger font for tablets and desktop */
+/* Base font size adjustments for better readability */
 @media (min-width: 768px) {
   body {
     font-size: 16px;
   }
+}
+
+/* Improve touch targets on mobile */
+button, 
+a {
+  touch-action: manipulation;
 }
 
 /* Custom color variables - Simplified palette */
@@ -62,31 +88,42 @@ body {
   }
 }
 
-/* Custom animations */
+/* Performance optimized animations */
 @keyframes float {
   0%, 100% {
-    transform: translateY(0px);
+    transform: translate3d(0, 0, 0);
   }
   50% {
-    transform: translateY(-8px);
+    transform: translate3d(0, -8px, 0);
   }
 }
 
 @keyframes glow {
   0%, 100% {
-    box-shadow: 0 0 3px rgba(249, 115, 22, 0.5);
+    box-shadow: 0 0 3px rgba(var(--bon-primary-rgb), 0.5);
   }
   50% {
-    box-shadow: 0 0 15px rgba(249, 115, 22, 0.8);
+    box-shadow: 0 0 15px rgba(var(--bon-primary-rgb), 0.8);
   }
 }
 
 .float-animation {
   animation: float 3s ease-in-out infinite;
+  will-change: transform;
+  backface-visibility: hidden;
 }
 
 .glow-animation {
   animation: glow 2s ease-in-out infinite;
+  will-change: box-shadow;
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .float-animation,
+  .glow-animation {
+    animation: none;
+  }
 }
 
 /* Mobile-optimized scrollbar */
